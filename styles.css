@@ -1,0 +1,203 @@
+/* ==========================================================================
+   ESTILO PRINCIPAL (Minimalista, Clean e Tons Claros de Verde)
+   ========================================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f7f9f7; 
+    color: #2b332c; 
+    line-height: 1.6;
+}
+
+/* Cabeçalho / Menu de Navegação */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e1e8e2;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #276231;
+}
+
+.logo span {
+    color: #72b17b;
+}
+
+nav a {
+    text-decoration: none;
+    color: #55685c;
+    margin-left: 25px;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #276231;
+}
+
+.btn-nav {
+    background-color: #edf7ee;
+    color: #276231 !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+.btn-nav:hover {
+    background-color: #dfeedf;
+}
+
+/* Seção de Introdução (Hero com Imagem de Fundo) */
+.hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+                url('https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    color: #1c4424;
+    margin-bottom: 15px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #445248;
+    max-width: 650px;
+    margin: 0 auto 30px auto;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: #276231;
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-principal:hover {
+    background-color: #1c4424;
+    transform: translateY(-2px);
+}
+
+/* Seção: O Panorama do Agro */
+.panorama-container {
+    padding: 80px 8%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e1e8e2;
+}
+
+.panorama-conteudo {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.panorama-conteudo h2 {
+    font-size: 28px;
+    color: #1c4424;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.panorama-descricao {
+    color: #55685c; 
+    text-align: center; 
+    max-width: 700px; 
+    margin: 0 auto;
+}
+
+.grid-panorama {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.bloco-info {
+    background-color: #f7f9f7;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #72b17b;
+}
+
+.bloco-info h4 {
+    color: #1c4424;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.bloco-info p {
+    font-size: 14px;
+    color: #55685c;
+}
+
+/* Seção das Soluções Interativas */
+.solucoes-container {
+    padding: 80px 8%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.solucoes-container h2 {
+    font-size: 28px;
+    color: #1c4424;
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    color: #728477;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+/* Container dos Botões Seletores */
+.abas-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-aba {
+    background-color: #ffffff;
+    border: 1px solid #d1ded3;
+    color: #55685c;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-aba:hover {
+    background-color: #edf7ee;
+    color: #1c442

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Agrinho - Agro Sustentável</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Agro<span>Sustentável</span></div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#panorama">O Cenário</a>
+            <a href="#solucoes">Soluções</a>
+            <a href="#contato" class="btn-nav">Fale Conosco</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Inovação e Sustentabilidade no Campo</h1>
+            <p>Transformando o agronegócio com tecnologia e soluções inteligentes que protegem os recursos naturais.</p>
+            <a href="#solucoes" class="btn-principal">Explorar Soluções</a>
+        </div>
+    </section>
+
+    <section id="panorama" class="panorama-container">
+        <div class="panorama-conteudo">
+            <h2>A Situação Atual do Agronegócio</h2>
+            <p class="panorama-descricao">
+                O setor agrícola enfrenta o maior desafio do século: alimentar uma população mundial crescente enquanto lida com as mudanças climáticas e a escassez de recursos.
+            </p>
+            
+            <div class="grid-panorama">
+                <div class="bloco-info">
+                    <h4>💧 Crise Hídrica</h4>
+                    <p>A agricultura consome cerca de 70% de toda a água doce captada no planeta. O desperdício em sistemas antigos de irrigação ameaça a segurança hídrica e a estabilidade das safras futuras.</p>
+                </div>
+                <div class="bloco-info">
+                    <h4>🌱 Degradação do Solo</h4>
+                    <p>O uso contínuo de monoculturas e o excesso de fertilizantes químicos esgotam os nutrientes da terra de forma acelerada, exigindo práticas urgentes de recuperação do ecossistema.</p>
+                </div>
+                <div class="bloco-info">
+                    <h4>🚀 A Virada Tecnológica</h4>
+                    <p>A "Agricultura 4.0" (uso de sensores, automação e fontes limpas de energia) deixou de ser um diferencial e se tornou uma necessidade real para reduzir custos e mitigar impactos ambientais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solucoes" class="solucoes-container">
+        <h2>Nossas Ideias & Soluções</h2>
+        <p class="subtitulo">Clique nos botões abaixo para ver os detalhes e como aplicar cada proposta:</p>
+        
+        <div class="abas-botoes">
+            <button class="btn-aba ativo" onclick="mostrarIdeia('agua', this)">💧 Gestão de Água</button>
+            <button class="btn-aba" onclick="mostrarIdeia('energia', this)">☀️ Energia Limpa</button>
+            <button class="btn-aba" onclick="mostrarIdeia('rotacao', this)">🌱 Rotação de Culturas</button>
+        </div>
+
+        <div class="conteudo-ideia">
+            <h3>Objetivo</h3>
+            <p id="texto-objetivo">Reduzir drasticamente o desperdício de recursos hídricos na agricultura, garantindo a saúde da plantação mesmo em períodos de seca extrema.</p>
+            
+            <h3>Como colocar em prática</h3>
+            <p id="texto-pratica">Instalar sistemas de irrigação gota a gota automatizados por sensores de umidade no solo e criar bacias de captação e armazenamento da água da chuva.</p>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <p>&copy; 2026 Projeto Agrinho. Desenvolvido para um futuro mais verde.</p>
+    </footer>
+
+    <script>
+        const dadosIdeias = {
+            agua: {
+                objetivo: "Reduzir drasticamente o desperdício de recursos hídricos na agricultura, garantindo a saúde da plantação mesmo em períodos de seca extrema.",
+                pratica: "Instalar sistemas de irrigação gota a gota automatizados por sensores de umidade no solo e criar bacias de captação e armazenamento da água da chuva."
+            },
+            energia: {
+                objetivo: "Substituir matrizes energéticas poluentes por fontes renováveis, diminuindo a pegada de carbono e os custos operacionais da fazenda.",
+                pratica: "Instalar painéis solares fotovoltaicos nos telhados dos galpões para alimentar os sistemas elétricos e construir geradores de biomassa aproveitando os resíduos orgânicos dos animais e da colheita."
+            },
+            rotacao: {
+                objetivo: "Preservar a fertilidade natural do solo, quebrar ciclos de pragas e doenças, e evitar a dependência excessiva de fertilizantes químicos.",
+                pratica: "Planejar a alternância de culturas (como intercalar soja e milho) a cada temporada, garantindo que diferentes nutrientes sejam fixados e absorvidos de forma equilibrada."
+            }
+        };
+
+        function mostrarIdeia(id, botaoClicado) {
+            document.getElementById('texto-objetivo').textContent = dadosIdeias[id].objetivo;
+            document.getElementById('texto-pratica').textContent = dadosIdeias[id].pratica;
+
+            const botoes = document.querySelectorAll('.btn-aba');
+            botoes.forEach(function(botao) {
+                botao.classList.remove('ativo');
+            });
+            
+            botaoClicado.classList.add('ativo');
+        }
+    </script>
+</body>
+</html>
